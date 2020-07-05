@@ -4,7 +4,7 @@ from app.serializers import PostSerializer, CategorySerializer, CategorySerializ
 from rest_framework import generics
 
 
-class PostList(generics.ListCreateAPIView):
+class PostList(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 

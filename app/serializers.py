@@ -23,6 +23,12 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = '__all__'
 
+class PostSerializerCreate(serializers.ModelSerializer):
+
+    class Meta:
+        model = Post
+        fields = ['title', 'status', 'content', 'author', 'category']
+
 
 class PostSerializerShort(serializers.ModelSerializer):
     class Meta:
